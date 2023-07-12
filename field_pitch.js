@@ -95,14 +95,20 @@ Blockly.FieldPitch = class extends Blockly.FieldTextInput {
         Blockly.FieldTextInput.prototype.showEditor_.call(this);
         //super.showEditor_();
 
-        const div = Blockly.WidgetDiv.DIV;
+        //const div = Blockly.WidgetDiv.DIV;
+        const div = Blockly.WidgetDiv.getDiv();
         if (!div.firstChild) {
             // Mobile interface uses Blockly.prompt.
             return;
         }
         // Build the DOM.
         const editor = this.dropdownCreate_();
-        Blockly.DropDownDiv.getContentDiv().appendChild(editor);
+        const editorContainer = Blockly.DropDownDiv.getContentDiv();
+
+        // prevent scrollbars on the editor div
+        editorContainer.style.overflow = 'hidden';
+
+        editorContainer.appendChild(editor);
 
         Blockly.DropDownDiv.setColour(
             this.sourceBlock_.style.colourPrimary,
@@ -117,8 +123,8 @@ Blockly.FieldPitch = class extends Blockly.FieldTextInput {
         // mousemove even if it's not in the middle of a drag.  In future we may
         // change this behaviour.  For now, using bindEvent_ instead of
         // bindEventWithChecks_ allows it to work without a mousedown/touchstart.
-        this.clickWrapper_ = Blockly.bindEvent_(this.containerElement_, "click", this, this.hide_);
-        this.moveWrapper_ = Blockly.bindEvent_(this.containerElement_, "mousemove", this, this.onMouseMove);
+        this.clickWrapper_ = Blockly.browserEvents.bind(this.containerElement_, "click", this, this.hide_);
+        this.moveWrapper_ = Blockly.browserEvents.bind(this.containerElement_, "mousemove", this, this.onMouseMove);
 
         this.updateGraph_();
     };
