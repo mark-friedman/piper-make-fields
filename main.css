@@ -1,0 +1,331 @@
+.blocklyToolboxDiv {
+    background-color: #3c3c3c;
+    height: 100%;
+    z-index: 61;
+    overflow-x: hidden;
+    width: 160px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 55px 0 50px 0;
+}
+
+.blocklyToolboxDiv .blocklyTreeRoot {
+    position: relative
+}
+
+.blocklyToolboxDiv .blocklyTreeRootDisabled .blocklyTreeRow {
+    filter: grayscale(85%)
+}
+
+.blocklyToolboxDiv .toolbox-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.blocklyWidgetDiv,
+.blocklyWidgetDiv>.blocklyDropdownMenu {
+    max-height: 200px !important
+}
+
+.blocklyWidgetDiv .goog-menu,
+.blocklyWidgetDiv>.blocklyDropdownMenu .goog-menu {
+    overflow-y: auto !important;
+    max-height: 110%
+}
+
+.blocklyTreeRow,
+div[role=treeitem] {
+    height: 35px;
+    line-height: 36px;
+    border-radius: 8px;
+    margin: 0 10px 7px;
+    transition: .2s;
+}
+
+.blocklyTreeRow {
+    background-color: #7F7F7F;
+    border-right: 8px solid;
+}
+
+.blocklyTreeRow .blocklyTreeLabel,
+div[role=treeitem] .blocklyTreeLabel {
+    color: #fff;
+    cursor: default;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 0 3px 0 6px;
+    vertical-align: middle
+}
+
+.blocklyTreeRow:hover .blocklyTreeLabel,
+div[role=treeitem]:hover .blocklyTreeLabel {
+    margin-left: 0px;
+}
+
+.blocklyTreeRow .blocklyTreeIcon,
+div[role=treeitem] .blocklyTreeIcon {
+    margin-block: -3px 0 0 -5px;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    border-radius: 8px 0 0 8px;
+    transition: .2s;
+    visibility: visible;
+}
+
+.blocklyTreeRow:hover,
+div[role=treeitem]:hover {
+    background-color: transparent;
+    transition: .2s
+}
+
+.blocklyTreeRow:hover .blocklyTreeIcon,
+div[role=treeitem]:hover .blocklyTreeIcon {
+    margin-left: 0px;
+}
+
+div[aria-level="1"] .blocklyTreeRow {
+    margin: 0;
+    padding-left: 10px !important;
+}
+
+div[aria-level="1"]:first-child .blocklyTreeRow {
+    border-color: rgb(0, 100, 0);
+}
+
+div[aria-level="1"]:nth-child(2) .blocklyTreeRow {
+    border-color: rgb(188, 117, 248);
+}
+
+div[aria-level="1"]:nth-child(3) .blocklyTreeRow {
+    border-color: rgb(205, 0, 255);
+}
+
+div[aria-level="1"]:nth-child(4) .blocklyTreeRow {
+    border-color: rgb(136, 181, 0);
+}
+
+div[aria-level="1"]:nth-child(5) .blocklyTreeRow {
+    border-color: rgb(189, 166, 0);
+}
+
+div[aria-level="1"]:nth-child(6) .blocklyTreeRow {
+    border-color: rgb(255, 108, 55);
+}
+
+div[aria-level="1"]:nth-child(7) .blocklyTreeRow {
+    border-color: rgb(206, 57, 5);
+}
+
+div[aria-level="1"]:nth-child(8) .blocklyTreeRow {
+    border-color: rgb(44, 177, 248);
+}
+
+div[aria-level="1"]:nth-child(9) .blocklyTreeRow {
+    border-color: rgb(0, 92, 185);
+}
+
+div[aria-level="1"]:nth-child(10) .blocklyTreeRow {
+    border-color: rgb(168, 186, 248);
+}
+
+div[aria-level="1"]:first-child .blocklyTreeRow:hover {
+    background-color: rgb(0, 100, 0);
+}
+
+div[aria-level="1"]:nth-child(2) .blocklyTreeRow:hover {
+    background-color: rgb(188, 117, 248);
+}
+
+div[aria-level="1"]:nth-child(3) .blocklyTreeRow:hover {
+    background-color: rgb(205, 0, 255);
+}
+
+div[aria-level="1"]:nth-child(4) .blocklyTreeRow:hover {
+    background-color: rgb(136, 181, 0);
+}
+
+div[aria-level="1"]:nth-child(5) .blocklyTreeRow:hover {
+    background-color: rgb(189, 166, 0);
+}
+
+div[aria-level="1"]:nth-child(6) .blocklyTreeRow:hover {
+    background-color: rgb(255, 108, 55);
+}
+
+div[aria-level="1"]:nth-child(7) .blocklyTreeRow:hover {
+    background-color: rgb(206, 57, 5);
+}
+
+div[aria-level="1"]:nth-child(8) .blocklyTreeRow:hover {
+    background-color: rgb(44, 177, 248);
+}
+
+div[aria-level="1"]:nth-child(9) .blocklyTreeRow:hover {
+    background-color: rgb(0, 92, 185);
+}
+
+div[aria-level="1"]:nth-child(10) .blocklyTreeRow:hover {
+    background-color: rgb(168, 186, 248);
+}
+
+.blocklyTreeRow.blocklyTreeSelected {
+    transform: translateX(10px);
+    background-color: transparent;
+    margin-left: 0;
+    border-radius: 8px 0 0 8px
+}
+
+div[aria-level="1"]:first-child .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(0, 100, 0) !important
+}
+
+div[aria-level="1"]:nth-child(2) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(188, 117, 248) !important
+}
+
+div[aria-level="1"]:nth-child(3) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(205, 0, 255) !important
+}
+
+div[aria-level="1"]:nth-child(4) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(136, 181, 0) !important
+}
+
+div[aria-level="1"]:nth-child(5) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(189, 166, 0) !important
+}
+
+div[aria-level="1"]:nth-child(6) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(255, 108, 55) !important
+}
+
+div[aria-level="1"]:nth-child(7) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(206, 57, 5) !important
+}
+
+div[aria-level="1"]:nth-child(8) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(44, 177, 248) !important
+}
+
+div[aria-level="1"]:nth-child(9) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(0, 92, 185) !important
+}
+
+div[aria-level="1"]:nth-child(10) .blocklyTreeRow.blocklyTreeSelected {
+    background-color: rgb(168, 186, 248) !important
+}
+
+div[aria-level="1"]:first-child .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 14' width='24' height='20'%3E%3Cpath fill='%23fff' d='M0 7 4 14 12 14 16 7 12 0 4 0Z'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(2) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 174 133' width='24' height='20'%3E%3Cpath fill='%23fff' d='M137 18L105 18C83 44 76 51 76 51 76 51 47 18 47 18L0 18 0 36 39 36C57 58 63 64 63 65 63 65 39 95 39 95L0 95 0 112 48 112 76 79 105 112 137 112C137 128 137 133 137 133 138 133 174 104 174 104 174 103 137 75 137 75L137 95 114 95C96 75 87 66 87 65 87 65 113 36 113 36L137 36C137 54 137 55 137 55 137 55 174 30 174 30 174 29 138 0 137 0 137-1 137 18 137 18Z'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(3) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 138 145' width='24' height='20'%3E%3Cpath fill='%23fff' d='M69 0C47 0 0 21 0 72 0 124 47 145 69 145 73 145 97 147 117 130 104 117 104 117 104 117 73 145 18 122 18 72 18 20 78 3 104 28 104 28 91 42 91 42 91 43 138 48 138 48 138 48 132 2 132 2 132 2 118 15 118 15 99 0 81 0 69 0Z'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(4) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 137 119' width='24' height='20'%3E%3Cpath fill-rule='evenodd' fill='%23fff' d='M0 0 137 0 137 119 0 119 0 0ZM18 102 119 102 119 18 18 18 18 102ZM32 34 105 34 105 51 32 51 32 34ZM32 67 105 67 105 84 32 84 32 67Z'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(5) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 119 123' width='24' height='20'%3E%3Cpath fill='%23fff' d='M38 0 41 33 74 33 72 4 89 4 91 33 119 33 119 50 93 51 94 77 119 77 119 94 95 94 97 123 80 123 78 94 45 94 47 120 30 120 28 94 0 94 0 77 27 77 25 50 0 50 0 33 24 33 21 0 38 0ZM30 120ZM89 4ZM72 4ZM41 33ZM44 77 77 77 75 50 42 50 44 77Z'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(6) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 136 117' width='24' height='20'%3E%3Cpath fill='%23fff' d='M0 9L0 17 29 17 29 0 0 0 0 9ZM43 9L43 17 136 17 136 0 43 0 43 9ZM0 42L0 51 29 51 29 33 0 33 0 42ZM43 42L43 51 136 51 136 33 43 33 43 42ZM0 75L0 84 29 84 29 66 0 66 0 75ZM43 75L43 84 136 84 136 66 43 66 43 75ZM0 109L0 117 29 117 29 100 0 100 0 109ZM43 109L43 117 136 117 136 100 43 100 43 109Z'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(7) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 200' width='24' height='20'%3E%3Cpath fill='%23fff' d='M90 0C39 0 34 6 33 33C31 84 38 84 15 84L15 116C40 116 30 114 33 174C34 198 55 200 90 200C90 187 91 183 90 169C49 170 94 114 51 101C93 83 47 30 90 32L90 0z M145 0L145 32C188 30 142 83 185 101C142 114 187 170 145 169C145 183 145 187 145 200C181 200 201 198 202 174C205 114 195 116 220 116L220 84C197 84 204 84 203 33C202 6 196 0 145 0z'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(8) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 146 147' width='24' height='20'%3E%3Ccircle cx='73' cy='26' r='26' fill='%23fff'/%3E%3Ccircle cx='73' cy='120' r='26' fill='%23fff'/%3E%3Ccircle cx='26' cy='73' r='26' fill='%23fff'/%3E%3Ccircle cx='120' cy='73' r='26' fill='%23fff'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(9) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-30 0 240 160' width='24' height='20'%3E%3Ccircle cx='80' cy='80' r='45' fill='%23fff'/%3E%3Ccircle cx='80' cy='80' r='70' fill='none' stroke='%23fff' stroke-width='18px'/%3E%3C/svg%3E")
+}
+
+div[aria-level="1"]:nth-child(10) .blocklyTreeIcon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 156 122' width='24' height='20'%3E%3Cpath fill='%23fff' d='M88 0C180 0 177 122 88 122 88 122 89 122 88 104 156 103 157 19 88 18 88 18 88 0 88 0ZM74 2C74 2 74 120 74 120 74 120 0 61 0 61 0 61 74 2 74 2ZM88 90C88 90 88 32 88 32 135 32 133 89 88 90Z'/%3E%3C/svg%3E")
+}
+
+.blocklyContainer.open .blocklyToolboxDiv {
+    width: 160px;
+}
+
+.blocklyContainer.open .blocklyToolboxDiv .blocklyTreeLabel,
+.blocklyContainer.open .blocklyToolboxDiv .blocklyTreeRow {
+    color: #fff
+}
+
+.blocklyFlyoutBackground {
+    fill: #ddd;
+    fill-opacity: .95
+}
+
+.blocklyFlyout {
+    z-index: 61;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blocklyFlyoutScrollbar {
+    z-index: 62
+}
+
+@keyframes warnIconAnimation {
+    from {
+        transform: scale(1.0) translate(9px, 18px);
+    }
+    to {
+        transform: scale(1.5) translate(4px, 9px);
+    }
+}
+
+.blocklyWarningIconGroup {
+    animation-name: warnIconAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.blocklyIconGroup:not(:hover),
+.blocklyIconGroupReadonly {
+    opacity: 0.8 !important; 
+}
+
+
+
+.musicScales {
+    width: 90px;
+    height: 290px;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='290' viewBox='647 -19 74 252'%3E%3Cpath fill='%23000' d='M651 174c-0-0 2-2 6-5 10-8 15-16 16-26-0-7-3-11-8-11-4 0-8 3-9 5-1 2 1 2 3 2 8-0 7 9 0 9-6-0-8-5-6-10 3-6 10-8 16-7 7 1 11 7 11 14-0 10-10 18-16 23-6 4-12 7-13 7zm31-25c0-5 6-5 7-0 0 5-6 5-7 0zm-0-12c-0-5 6-5 6 0 0 5-6 5-6 0zM663 121c-2-2-2-6 0-9 3-3 8-2 9 2 1 4 0 7-5 7 3 2 7 2 9 1 7-4 3-12 2-19-10 3-20-3-23-13-3-10 3-20 14-28-1-4-2-10-2-15 1-7 5-15 8-14 3 1 5 9 6 13 0 6-0 11-3 15-2 3-5 6-6 7 1 3 1 7 2 9 16-3 20 21 6 25 1 4 3 11 3 14-1 3-3 7-9 8-6 1-8-1-10-4zm14-20c-1-6-2-11-4-18-3 1-6 4-6 7-0 3 3 6 5 6 1 0-3 2-6-2-3-4-5-12 5-17-1-5-1-6-2-8-6 6-12 12-12 19-0 9 8 17 19 14zm-2-18c1 6 3 12 4 17 10-5 5-18-4-17zm-5-23c1-1 3-3 4-4 3-3 7-13 2-15-4-1-7 8-7 14 0 2 1 4 1 6z'/%3E%3Cpath d='M648 77h74M648 103h74M648 90h74M648 64h74M648 51h74M648 155h74M648 181h74M648 168h74M648 142h74M648 129h74' stroke='%23000'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: 0px 6px;
+}
+
+.notePicker {
+    position: absolute;
+    top: 3px;
+    left: 60px;
+    height: 290px;
+    width: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1860' height='290' viewBox='727 100 1587 1'%3E%3Cdefs%3E%3Cpath id='n' d='m0 0a5 7 73 0 1-5 7 5 7 73 0 1-9-2 5 7 73 0 1 4-7 5 7 73 0 1 9 1'/%3E%3Cpath id='f' d='m0 0a5 7 73 0 1-5 7 5 7 73 0 1-9-2 5 7 73 0 1 4-7 5 7 73 0 1 9 1m6-2c0 1-0 1-1 2-1 1-1 1-2 2v-3c0-1 1-1 2-1 1 0 1 1 1 1zm-0-2c-1 0-2 1-3 1v-7h-1v12c0 0 0 1 0 1 1-1 3-1 4-2 1-1 2-2 2-3-0-1-1-2-2-2z'/%3E%3C/defs%3E%3Cpath d='M727 194h21m-21 13h21m6-13h21m-21 13h21m5-13h21m-21 13h21m5-13h21m-21 13h21m6-13h21m-21 13h21m5-13h21m6 0h21m5 0h21m429-78h21m6 0h21m5 0h21m6 0h21m5 0h21m402-78h21m6 0h21m5 0h21m6-13h21m-21 13h21m5-13h21m-21 13h21m6-13h21m-21 13h21m5-13h21m-21 13h21m6-26h21m-21 13h21m-21 13h21m5-26h21m-21 13h21m-21 13h21m5-26h21m-21 13h21m-21 13h21m6-39h21m-21 13h21m-21 13h21m-21 13h21m5-39h21m-21 13h21m-21 13h21m-21 13h21m6-39h21m-21 13h21m-21 13h21m-21 13h21m5-39h21m-21 13h21m-21 13h21m-21 13h21m6-39h21m-21 13h21m-21 13h21m-21 13h21m5-39h21m-21 13h21m-21 13h21m-21 13h21' fill='none' stroke='%23000'/%3E%3Cuse xlink:href='%23f' x='744' y='211'/%3E%3Cuse xlink:href='%23n' x='771' y='211'/%3E%3Cuse xlink:href='%23n' x='797' y='205'/%3E%3Cuse xlink:href='%23f' x='824' y='198'/%3E%3Cuse xlink:href='%23n' x='850' y='198'/%3E%3Cuse xlink:href='%23f' x='877' y='192'/%3E%3Cuse xlink:href='%23n' x='903' y='192'/%3E%3Cuse xlink:href='%23n' x='930' y='185'/%3E%3Cuse xlink:href='%23f' x='956' y='179'/%3E%3Cuse xlink:href='%23n' x='983' y='179'/%3E%3Cuse xlink:href='%23f' x='1009' y='172'/%3E%3Cuse xlink:href='%23n' x='1035' y='172'/%3E%3Cuse xlink:href='%23f' x='1062' y='166'/%3E%3Cuse xlink:href='%23n' x='1088' y='166'/%3E%3Cuse xlink:href='%23n' x='1115' y='159'/%3E%3Cuse xlink:href='%23f' x='1141' y='153'/%3E%3Cuse xlink:href='%23n' x='1168' y='153'/%3E%3Cuse xlink:href='%23f' x='1194' y='146'/%3E%3Cuse xlink:href='%23n' x='1221' y='146'/%3E%3Cuse xlink:href='%23n' x='1247' y='140'/%3E%3Cuse xlink:href='%23f' x='1274' y='133'/%3E%3Cuse xlink:href='%23n' x='1300' y='133'/%3E%3Cuse xlink:href='%23f' x='1327' y='127'/%3E%3Cuse xlink:href='%23n' x='1353' y='127'/%3E%3Cuse xlink:href='%23f' x='1379' y='120'/%3E%3Cuse xlink:href='%23n' x='1406' y='120'/%3E%3Cuse xlink:href='%23n' x='1432' y='114'/%3E%3Cuse xlink:href='%23f' x='1459' y='107'/%3E%3Cuse xlink:href='%23n' x='1485' y='107'/%3E%3Cuse xlink:href='%23f' x='1512' y='101'/%3E%3Cuse xlink:href='%23n' x='1538' y='101'/%3E%3Cuse xlink:href='%23n' x='1565' y='95'/%3E%3Cuse xlink:href='%23f' x='1591' y='88'/%3E%3Cuse xlink:href='%23n' x='1618' y='88'/%3E%3Cuse xlink:href='%23f' x='1644' y='82'/%3E%3Cuse xlink:href='%23n' x='1670' y='82'/%3E%3Cuse xlink:href='%23f' x='1697' y='75'/%3E%3Cuse xlink:href='%23n' x='1723' y='75'/%3E%3Cuse xlink:href='%23n' x='1750' y='69'/%3E%3Cuse xlink:href='%23f' x='1776' y='62'/%3E%3Cuse xlink:href='%23n' x='1803' y='62'/%3E%3Cuse xlink:href='%23f' x='1829' y='56'/%3E%3Cuse xlink:href='%23n' x='1856' y='56'/%3E%3Cuse xlink:href='%23n' x='1882' y='49'/%3E%3Cuse xlink:href='%23f' x='1909' y='43'/%3E%3Cuse xlink:href='%23n' x='1935' y='43'/%3E%3Cuse xlink:href='%23f' x='1962' y='36'/%3E%3Cuse xlink:href='%23n' x='1988' y='36'/%3E%3Cuse xlink:href='%23f' x='2014' y='30'/%3E%3Cuse xlink:href='%23n' x='2041' y='30'/%3E%3Cuse xlink:href='%23n' x='2067' y='23'/%3E%3Cuse xlink:href='%23f' x='2094' y='17'/%3E%3Cuse xlink:href='%23n' x='2120' y='17'/%3E%3Cuse xlink:href='%23f' x='2147' y='10'/%3E%3Cuse xlink:href='%23n' x='2173' y='10'/%3E%3Cuse xlink:href='%23n' x='2200' y='4'/%3E%3Cuse xlink:href='%23f' x='2226' y='-3'/%3E%3Cuse xlink:href='%23n' x='2253' y='-3'/%3E%3Cuse xlink:href='%23f' x='2279' y='-9'/%3E%3Cuse xlink:href='%23n' x='2305' y='-9'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: 0px 0px;
+}
+
+.blockColorBlackText {
+    fill: #000;
+}
