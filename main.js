@@ -1,5 +1,6 @@
-window.Blockly = require("blockly");
-require("./utils.js")
+//import * as Blockly from 'blockly';
+//window.Blockly = require("blockly");
+//require("./utils.js")
 
 // Your existing JavaScript code here
 // ...

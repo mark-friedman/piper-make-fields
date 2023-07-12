@@ -1,7 +1,6 @@
 // TODO: This was missing from blockly_compressed?
 //Blockly.Procedures.DEFAULT_ARG = 'x';
-window.Blockly = require("blockly");
-
+//window.Blockly = require("blockly");
 
 
 if (!Blockly.Media) {
