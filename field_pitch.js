@@ -4,20 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-//const { Field } = require("blockly/blockly_compressed");
-
 /**
  * @fileoverview Music pitch input field. Borrowed from Blockly Games.
  * @author fraser@google.com (Neil Fraser)
  * @author samelh@google.com (Sam El-Husseini)
  * @author matt.m.matz@gmail.com (Matthew Matz) - Modified origial example
  */
-
-
-//import * as Blockly from 'blockly/core';
-
-//const Blockly = require("blockly");
-//var Blockly = require("blockly");
 
 
 Blockly.FieldPitch = class extends Blockly.FieldTextInput {
@@ -73,7 +65,7 @@ Blockly.FieldPitch = class extends Blockly.FieldTextInput {
          */
         this.moveWrapper_ = null;
 
-        //this.SERIALIZABLE = true;
+        this.SERIALIZABLE = true;
     }
 
     /**
@@ -295,4 +287,3 @@ Blockly.FieldPitch = class extends Blockly.FieldTextInput {
 
 
 Blockly.fieldRegistry.register('field_pitch', Blockly.FieldPitch);
-//module.exports = FieldPitch;

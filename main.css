@@ -130,7 +130,7 @@ div[aria-level="1"]:nth-child(9) .blocklyTreeRow {
 }
 
 div[aria-level="1"]:nth-child(10) .blocklyTreeRow {
-    border-color: rgb(168, 186, 248);
+    border-color: rgb(144, 169, 255);
 }
 
 div[aria-level="1"]:first-child .blocklyTreeRow:hover {
@@ -170,7 +170,7 @@ div[aria-level="1"]:nth-child(9) .blocklyTreeRow:hover {
 }
 
 div[aria-level="1"]:nth-child(10) .blocklyTreeRow:hover {
-    background-color: rgb(168, 186, 248);
+    background-color: rgb(144, 169, 255);
 }
 
 .blocklyTreeRow.blocklyTreeSelected {
@@ -217,7 +217,7 @@ div[aria-level="1"]:nth-child(9) .blocklyTreeRow.blocklyTreeSelected {
 }
 
 div[aria-level="1"]:nth-child(10) .blocklyTreeRow.blocklyTreeSelected {
-    background-color: rgb(168, 186, 248) !important
+    background-color: rgb(144, 169, 255) !important
 }
 
 div[aria-level="1"]:first-child .blocklyTreeIcon {
@@ -283,6 +283,10 @@ div[aria-level="1"]:nth-child(10) .blocklyTreeIcon {
     z-index: 62
 }
 
+.blocklyMainWorkspaceScrollbar {
+    display: none;
+}
+
 @keyframes warnIconAnimation {
     from {
         transform: scale(1.0) translate(9px, 18px);
@@ -305,6 +309,21 @@ div[aria-level="1"]:nth-child(10) .blocklyTreeIcon {
 }
 
 
+.blocklyMainBackground {
+    stroke-width: 0; 
+    stroke: none;
+}
+
+#bottom-area {
+    background: #fff;
+}
+
+#toolbox-extension {
+    height: 100%;
+    width: 160px;
+    background-color: #3c3c3c;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
 .musicScales {
     width: 90px;
@@ -328,4 +347,15 @@ div[aria-level="1"]:nth-child(10) .blocklyTreeIcon {
 
 .blockColorBlackText {
     fill: #000;
+}
+
+.colorGridTable {
+    background-color: #333333;
+    border-color: rgb(0 0 0);
+}
+
+.colorGridTable td {
+    display: table-cell;
+    width: 10px;
+    height: 10px;
 }

@@ -1238,7 +1238,7 @@ Blockly.Blocks['color_value'] = {
     init: function () {
         this.appendDummyInput()
             .appendField("color", "COLOR_LABEL")
-            .appendField(new Blockly.FieldColour('00FF00')
+            .appendField(new Blockly.FieldColour('BDA602')
                     .setColours(Blockly.Lists.ColorPickerList)
                     .setColumns(9), "COLOR");
         this.setInputsInline(true);
@@ -1254,7 +1254,6 @@ Blockly.Blocks['color_value'] = {
         } else {
             this.getField("COLOR_LABEL").textElement_.style.fill = '#fff';
         }
-        //console.log(currentBlockColor);
     }
 };
 
@@ -1615,7 +1614,8 @@ Blockly.Blocks['graph_output'] = {
             this.getInput('PRINT0')
                 .appendField(new Blockly.FieldLabel('\u2B24', 'ct-marker-0'));
             this.setInputsInline(false);
-            this.setMutator(new Blockly.Mutator(['graph_dec']));
+            //this.setMutator(new Blockly.Mutator(['graph_dec']));
+            this.setMutator(new Blockly.icons.MutatorIcon(['graph_dec'], this));
         } else {
             for (let i = 0; i < this.optionList_.length; i++) {
                 if (this.getInput('PRINT' + i)) {
@@ -1715,6 +1715,7 @@ Blockly.Blocks['graph_dec'] = {
     }
 };
 
+/*
 Blockly.Blocks['color_matrix'] = {
     init: function () {
         this.appendDummyInput()
@@ -1730,7 +1731,7 @@ Blockly.Blocks['color_matrix'] = {
         this.setStyle('value_blocks');
         this.setTooltip("");
         this.setHelpUrl("");
-        this.currentColor = 'FFFFFF';
+        this.currentColor = 'FFFFFF'; // necessary to make the paintbrush work!
         this.hiddenState = true;
     },
     onchange: function (event) {
@@ -1760,6 +1761,36 @@ Blockly.Blocks['color_matrix'] = {
             this.hiddenState = true;
             this.appendDummyInput('COLOR_PICKER')
                 .appendField('\u00a0\u00a0');
+        }
+    }
+};
+*/
+
+Blockly.Blocks['color_matrix'] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField('pixel grid', 'COLOR_LABEL')
+            .appendField(new Blockly.FieldColorGrid('PAINTBRUSH'), "ACTION");
+        this.appendDummyInput('COLOR_PICKER')
+            .appendField('\u00a0\u00a0')
+            .appendField(new Blockly.FieldColour('#BDA602', function (value) {
+                this.getSourceBlock().currentColor = value.replace(/#/g, '');
+                return value;
+            }).setColours(Blockly.Lists.ColorPickerList).setColumns(9), "PAINTBRUSH");
+        this.setOutput(true, Blockly.Constants.PIXELGRID);
+        this.setInputsInline(true);
+        this.setStyle('value_blocks');
+        this.setTooltip("");
+        this.setHelpUrl("");
+        this.currentColor = 'BDA602'; // necessary to make the paintbrush work!
+        this.hiddenState = true;
+    },
+    onchange: function () {
+        let currentBlockColor = Blockly.utils.colour.hexToRgb(this.getFieldValue('PAINTBRUSH'));
+        if ((2 * currentBlockColor[0]) + (7 * currentBlockColor[1]) + currentBlockColor[2] > 1800) {
+            this.getField("COLOR_LABEL").textElement_.style.fill = '#000';
+        } else {
+            this.getField("COLOR_LABEL").textElement_.style.fill = '#fff';
         }
     }
 };
@@ -1888,7 +1919,6 @@ Blockly.Blocks['text_repeat'] = {
      */
     init: function() {
         this.jsonInit({
-            "type": "text_repeat",
             "message0": "%{BKY_TEXT_REPEAT_TITLE}",
             "args0": [
                 {
@@ -1898,15 +1928,134 @@ Blockly.Blocks['text_repeat'] = {
                 {
                     "type": "input_value",
                     "name": "NUM",
-                    "check": "Number"
+                    "check": Blockly.Constants.NUMBER
                 }
             ],
-            "output": "Array",
-            "style": "chip_blocks",
+            "output": Blockly.Constants.LIST,
+            "style": "value_blocks",
             "tooltip": "%{BKY_TEXT_REPEAT_TOOLTIP}",
             "helpUrl": "%{BKY_TEXT_REPEAT_HELPURL}"
         });
     }
 };
 
-Blockly.Blocks['my_random'] = Blockly.Blocks['math_random_int'];
+Blockly.Blocks['my_random'] = {
+    init: function() {
+        this.jsonInit({  // Block for random integer between [X] and [Y].
+            'message0': '%{BKY_MATH_RANDOM_INT_TITLE}',
+            'args0': [
+                {
+                    'type': 'input_value',
+                    'name': 'FROM',
+                    'check': Blockly.Constants.NUMBER,
+                },
+                {
+                    'type': 'input_value',
+                    'name': 'TO',
+                    'check': Blockly.Constants.NUMBER,
+                },
+            ],
+            'inputsInline': true,
+            'output': Blockly.Constants.NUMBER,
+            'style': 'value_blocks',
+            'tooltip': '%{BKY_MATH_RANDOM_INT_TOOLTIP}',
+            'helpUrl': '%{BKY_MATH_RANDOM_INT_HELPURL}',
+        });
+    }
+};
+
+Blockly.Blocks['logic_boolean'] = {
+    init: function() {
+        this.jsonInit({
+            'message0': '%1',
+            'args0': [
+                {
+                    'type': 'field_dropdown',
+                    'name': 'BOOL',
+                    'options': [
+                        ['%{BKY_LOGIC_BOOLEAN_TRUE}', 'TRUE'],
+                        ['%{BKY_LOGIC_BOOLEAN_FALSE}', 'FALSE'],
+                    ],
+                },
+            ],
+            'output': Blockly.Constants.BOOLEAN,
+            'style': 'value_blocks',
+            'tooltip': '%{BKY_LOGIC_BOOLEAN_TOOLTIP}',
+            'helpUrl': '%{BKY_LOGIC_BOOLEAN_HELPURL}',
+        });
+    }
+};
+
+
+Blockly.Blocks['math_arithmetic'] = {
+    init: function() {
+        this.jsonInit({
+            "message0": "%1 %2 %3",
+            "args0": [
+                {
+                    "type": "input_value",
+                    "name": "A",
+                    "check": Blockly.Constants.NUMBER
+                },
+                {
+                    "type": "field_dropdown",
+                    "name": "OP",
+                    "options": [
+                        ["%{BKY_MATH_ADDITION_SYMBOL}", "ADD"],
+                        ["%{BKY_MATH_SUBTRACTION_SYMBOL}", "MINUS"],
+                        ["%{BKY_MATH_MULTIPLICATION_SYMBOL}", "MULTIPLY"],
+                        ["%{BKY_MATH_DIVISION_SYMBOL}", "DIVIDE"],
+                        ["%{BKY_MATH_POWER_SYMBOL}", "POWER"],
+                        ["%", "MODULO"],
+                    ]
+                },
+                {
+                    "type": "input_value",
+                    "name": "B",
+                    "check": Blockly.Constants.NUMBER
+                }
+            ],
+            "inputsInline": true,
+            "output": Blockly.Constants.NUMBER,
+            "style": "math_blocks",
+            "helpUrl": "%{BKY_MATH_ARITHMETIC_HELPURL}",
+            "extensions": ["math_op_tooltip"]
+        });
+    }
+};
+
+Blockly.Blocks['logic_compare'] = {
+    init: function() {
+        this.jsonInit({
+            "message0": "%1 %2 %3",
+            "args0": [
+                {
+                    "type": "input_value",
+                    "name": "A"
+                },
+                {
+                    "type": "field_dropdown",
+                    "name": "OP",
+                    "options": [
+                        ["=", "EQ"],
+                        ["\u2248", "AEQ"],
+                        ["\u2260", "NEQ"],
+                        ["\u200F<", "LT"],
+                        ["\u200F\u2264", "LTE"],
+                        ["\u200F>", "GT"],
+                        ["\u200F\u2265", "GTE"]
+                    ]
+                },
+                {
+                    "type": "input_value",
+                    "name": "B"
+                }
+            ],
+            "inputsInline": true,
+            "output": Blockly.Constants.BOOLEAN,
+            "style": "logic_blocks",
+            "helpUrl": "%{BKY_LOGIC_COMPARE_HELPURL}",
+            "extensions": ["logic_compare", "logic_op_tooltip"]
+        });
+    }
+};

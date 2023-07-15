@@ -19,19 +19,19 @@ const piperMakeTheme = Blockly.Theme.defineTheme('piper-make-theme', {
           "colourTertiary": "#003300"
         },
         "logic_blocks": {
-          "colourPrimary": "#bc75f8",
+          "colourPrimary": "#BC75F8",
           "colourSecondary": "#DFA6FF",
           "colourTertiary": "#8C4FAB"
         },
         "math_blocks": {
-          "colourPrimary": "#bc75f8",
+          "colourPrimary": "#BC75F8",
           "colourSecondary": "#DFA6FF",
           "colourTertiary": "#8C4FAB"
         },
         "loop_blocks": {
-          "colourPrimary": "#cd00ff",
+          "colourPrimary": "#CD00FF",
           "colourSecondary": "#F36EFF",
-          "colourTertiary": "#8000B2"
+          "colourTertiary": "#9200B6"
         },
         "variable_blocks": {
           "colourPrimary": "#88B500",
@@ -46,22 +46,22 @@ const piperMakeTheme = Blockly.Theme.defineTheme('piper-make-theme', {
         "value_blocks": {
           "colourPrimary": "#BDA600",
           "colourSecondary": "#FFD836",
-          "colourTertiary": "#806500"
+          "colourTertiary": "#9C7D00"
         },
         "text_blocks": {
           "colourPrimary": "#BDA600",
           "colourSecondary": "#FFD836",
-          "colourTertiary": "#806500"
+          "colourTertiary": "#9C7D00"
         },
         "list_blocks": {
-          "colourPrimary": "#ff6c37",
+          "colourPrimary": "#FF6C37",
           "colourSecondary": "#FFA366",
-          "colourTertiary": "#804C30"
+          "colourTertiary": "#C63500"
         },
         "sound_blocks": {
-          "colourPrimary": "#A8BAF8",
+          "colourPrimary": "#90A9FF",
           "colourSecondary": "#D6E2FF",
-          "colourTertiary": "#5477B2"
+          "colourTertiary": "#6881D6"
         },
         "procedure_blocks": {
           "colourPrimary": "#CE3905",
@@ -71,12 +71,12 @@ const piperMakeTheme = Blockly.Theme.defineTheme('piper-make-theme', {
         "input_blocks": {
           "colourPrimary": "#2CB1F8",
           "colourSecondary": "#A6DAFF",
-          "colourTertiary": "#005580"
+          "colourTertiary": "#007BBA"
         },
         "output_blocks": {
           "colourPrimary": "#005CB9",
           "colourSecondary": "#66A3FF",
-          "colourTertiary": "#003066"
+          "colourTertiary": "#003F80"
         }
     }
   });
@@ -116,7 +116,6 @@ function setupBlockly(data) {
         },
         renderer: 'zelos',
         scrollbars: false
-
     });
 
     window.addEventListener("resize", resizeBlocklyContainer, false);

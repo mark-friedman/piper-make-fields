@@ -605,7 +605,7 @@
                         "type": "sound_note_duration"
                     },
                     {
-                        "visible": false,
+                        "visible": true,
                         "type": "color_matrix"
                     },
                     {
@@ -811,12 +811,12 @@
                     {
                         "visible": true,
                         "type": "neopixel_set_pixel",
-                        "inner": "<value name=\"PIXEL\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"COLOR\"><block type=\"color_value\"><field name=\"COLOR\">#00FF00</field></block></value>"
+                        "inner": "<value name=\"PIXEL\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"COLOR\"><block type=\"color_value\"><field name=\"COLOR\">#00CC00</field></block></value>"
                     },
                     {
                         "visible": true,
                         "type": "neopixel_fill",
-                        "inner": "<value name=\"COLOR\"><block type=\"color_value\"><field name=\"COLOR\">#00FF00</field></block></value>"
+                        "inner": "<value name=\"COLOR\"><block type=\"color_value\"><field name=\"COLOR\">#00CC00</field></block></value>"
                     },
                     {
                         "visible": true,
@@ -830,12 +830,12 @@
                     {
                         "visible": true,
                         "type": "lightshow_pixel",
-                        "inner": "<value name=\"PIXEL_X\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"PIXEL_Y\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"COLOR\"><block type=\"color_value\"><field name=\"COLOR\">#00FF00</field></block></value>"
+                        "inner": "<value name=\"PIXEL_X\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"PIXEL_Y\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"COLOR\"><block type=\"color_value\"><field name=\"COLOR\">#00CC00</field></block></value>"
                     },
                     {
                         "visible": true,
                         "type": "lightshow_box",
-                        "inner": "<value name=\"PIXEL_X\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"PIXEL_Y\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"PIXEL_W\"><block type=\"math_number\"><field name=\"NUM\">3</field></block></value><value name=\"PIXEL_H\"><block type=\"math_number\"><field name=\"NUM\">3</field></block></value><value name=\"COLOR\"><block type=\"color_value\"><field name=\"COLOR\">#00FF00</field></block></value>"
+                        "inner": "<value name=\"PIXEL_X\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"PIXEL_Y\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"PIXEL_W\"><block type=\"math_number\"><field name=\"NUM\">3</field></block></value><value name=\"PIXEL_H\"><block type=\"math_number\"><field name=\"NUM\">3</field></block></value><value name=\"COLOR\"><block type=\"color_value\"><field name=\"COLOR\">#00CC00</field></block></value>"
                     },
                     {
                         "visible": true,
