@@ -316,6 +316,7 @@ div[aria-level="1"]:nth-child(10) .blocklyTreeIcon {
 
 #bottom-area {
     background: #fff;
+    display: flex;
 }
 
 #toolbox-extension {
@@ -323,6 +324,14 @@ div[aria-level="1"]:nth-child(10) .blocklyTreeIcon {
     width: 160px;
     background-color: #3c3c3c;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#code-display {
+    height: 100%;
+    width: 540px;
+    background-color: #aaa;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .musicScales {

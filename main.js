@@ -120,6 +120,14 @@ function setupBlockly(data) {
 
     window.addEventListener("resize", resizeBlocklyContainer, false);
     resizeBlocklyContainer();
+
+    // Update generated code and local storage when block changes are made
+    workspace.addChangeListener((event) => {
+      // Don't make changes unless it's necessary
+      if (event.type !== Blockly.Events.UI) {
+          $('#code-display').innerHTML = Blockly.Python.workspaceToCode(workspace);
+      }
+  });
 }
 
 
