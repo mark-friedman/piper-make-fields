@@ -1183,34 +1183,34 @@ window.emojiImages = [];
 [
     {
         name: "in-love", //    \u1F60D  20  0x14
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22 fill-rule=%22evenodd%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M131 344c71 57 148 82 244 0%22/%3E %3Cpath fill=%22%23ed3533%22 d=%22M146 261c8 6 11 6 18 1 0 0 123-93 55-137-25-16-60 1-64 16-5-15-38-36-66-14-61 46 57 134 57 134zm198 0c8 6 11 6 18 1 0 0 123-93 55-137-25-16-60 1-64 16-5-15-38-36-66-14-61 46 57 134 57 134z%22/%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M131 344c71 57 148 82 244 0%22/%3E %3Cpath fill=%22%23ed3533%22 d=%22M146 261c8 6 11 6 18 1 0 0 123-93 55-137-25-16-60 1-64 16-5-15-38-36-66-14-61 46 57 134 57 134zm198 0c8 6 11 6 18 1 0 0 123-93 55-137-25-16-60 1-64 16-5-15-38-36-66-14-61 46 57 134 57 134z%22/%3E%3C/svg%3E"
     },{
         name: "sad", //        \u1F641  21  0x15
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22 fill-rule=%22evenodd%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22 fill-rule=%22evenodd%22/%3E %3Ccircle cx=%22326.7%22 cy=%22166.2%22 r=%2240.1%22 fill-rule=%22evenodd%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M131 386c71-57 148-82 244 1%22/%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22/%3E %3Ccircle cx=%22326.7%22 cy=%22166.2%22 r=%2240.1%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M131 386c71-57 148-82 244 1%22/%3E%3C/svg%3E"
     },{
         name: "happy", //      \u1F600  22  0x16
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22 fill-rule=%22evenodd%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22 fill-rule=%22evenodd%22/%3E %3Ccircle cx=%22326.7%22 cy=%22166.2%22 r=%2240.1%22 fill-rule=%22evenodd%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M88 255c1 218 332 220 330 0%22/%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22/%3E %3Ccircle cx=%22326.7%22 cy=%22166.2%22 r=%2240.1%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M88 255c1 218 332 220 330 0%22/%3E%3C/svg%3E"
     },{
         name: "thinking", //   \u1F914  23  0x17  
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 546 546%22%3E %3Cellipse cx=%22272.2%22 cy=%22244.2%22 fill=%22%23ffcc4d%22 fill-rule=%22evenodd%22 rx=%22244.2%22 ry=%22243.4%22/%3E %3Cpath fill=%22%23f4900c%22 d=%22M138 358c15-11 17-32 13-48s-7-29 3-37c19-14 46 19 51 55 3 27-17 51-17 51-3 4 1 6 4 5l167-37c22-5 30 34 10 39l-90 22c12 5 25 31-1 46 25 11 12 37-4 41 15 3 13 31-9 36l-58 13c-35 9-92-16-108-56-20-51-14-88 39-130Z%22/%3E %3Cellipse cx=%22203.2%22 cy=%22158.6%22 fill-rule=%22evenodd%22 rx=%2231.2%22 ry=%2238.5%22/%3E %3Cellipse cx=%22365.4%22 cy=%22174.8%22 fill-rule=%22evenodd%22 rx=%2231.2%22 ry=%2238.5%22/%3E %3Cpath fill=%22none%22 stroke=%22%23664500%22 stroke-linecap=%22round%22 stroke-width=%2225%22 d=%22M230 287c38-6 74 1 107 29M152 84c30-13 65-21 108 3m56 56c31-13 65-17 108 6%22/%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 546 546%22%3E %3Cellipse cx=%22272.2%22 cy=%22244.2%22 fill=%22%23ffcc4d%22 rx=%22244.2%22 ry=%22243.4%22/%3E %3Cpath fill=%22%23f4900c%22 d=%22M138 358c15-11 17-32 13-48s-7-29 3-37c19-14 46 19 51 55 3 27-17 51-17 51-3 4 1 6 4 5l167-37c22-5 30 34 10 39l-90 22c12 5 25 31-1 46 25 11 12 37-4 41 15 3 13 31-9 36l-58 13c-35 9-92-16-108-56-20-51-14-88 39-130Z%22/%3E %3Cellipse cx=%22203.2%22 cy=%22158.6%22 rx=%2231.2%22 ry=%2238.5%22/%3E %3Cellipse cx=%22365.4%22 cy=%22174.8%22 rx=%2231.2%22 ry=%2238.5%22/%3E %3Cpath fill=%22none%22 stroke=%22%23664500%22 stroke-linecap=%22round%22 stroke-width=%2225%22 d=%22M230 287c38-6 74 1 107 29M152 84c30-13 65-21 108 3m56 56c31-13 65-17 108 6%22/%3E%3C/svg%3E"
     },{
         name: "quiet", //      \u1F92B  24  0x18
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Cg fill-rule=%22evenodd%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22/%3E %3Ccircle cx=%22326.7%22 cy=%22166.2%22 r=%2240.1%22/%3E %3Crect width=%22286%22 height=%2260%22 x=%22212%22 y=%22174%22 fill=%22%23efefef%22 ry=%2214%22 transform=%22rotate(22)%22/%3E %3Crect width=%22286%22 height=%2260%22 x=%22-37%22 y=%22363%22 fill=%22%23fff%22 ry=%2214%22 transform=%22rotate(-22)%22/%3E %3C/g%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Cg%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22/%3E %3Ccircle cx=%22326.7%22 cy=%22166.2%22 r=%2240.1%22/%3E %3Crect width=%22286%22 height=%2260%22 x=%22212%22 y=%22174%22 fill=%22%23efefef%22 ry=%2214%22 transform=%22rotate(22)%22/%3E %3Crect width=%22286%22 height=%2260%22 x=%22-37%22 y=%22363%22 fill=%22%23fff%22 ry=%2214%22 transform=%22rotate(-22)%22/%3E %3C/g%3E%3C/svg%3E"
     },{
         name: "confused", //   \u1F615  25  0x19
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22 fill-rule=%22evenodd%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22 fill-rule=%22evenodd%22/%3E %3Cellipse cx=%22325.9%22 cy=%22166.2%22 fill-rule=%22evenodd%22 rx=%2267.7%22 ry=%2266.1%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M98 301c0 78 110 109 157 33 49-78 157-33 156 50%22/%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22/%3E %3Cellipse cx=%22325.9%22 cy=%22166.2%22 rx=%2267.7%22 ry=%2266.1%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M98 301c0 78 110 109 157 33 49-78 157-33 156 50%22/%3E%3C/svg%3E"
     },{
         name: "suspicious", // \u1F928  26  0x1A
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22 fill-rule=%22evenodd%22/%3E %3Ccircle cx=%22174.7%22 cy=%22220.1%22 r=%2240.1%22 fill-rule=%22evenodd%22/%3E %3Cellipse cx=%22334.8%22 cy=%22202.3%22 fill-rule=%22evenodd%22 rx=%2240.1%22 ry=%2260.8%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%2220%22 d=%22M191 404h120M95 99l81 64 40-45m79 8 37-45 81 63%22/%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Ccircle cx=%22174.7%22 cy=%22220.1%22 r=%2240.1%22/%3E %3Cellipse cx=%22334.8%22 cy=%22202.3%22 rx=%2240.1%22 ry=%2260.8%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%2220%22 d=%22M191 404h120M95 99l81 64 40-45m79 8 37-45 81 63%22/%3E%3C/svg%3E"
     },{
         name: "unhappy", //    \u1F622  27  0x1B
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22 fill-rule=%22evenodd%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22 fill-rule=%22evenodd%22/%3E %3Ccircle cx=%22326.7%22 cy=%22166.2%22 r=%2240.1%22 fill-rule=%22evenodd%22/%3E %3Cpath fill=%22%2331a7ff%22 d=%22M367 203s-64 100-4 101 20-76 4-101z%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M131 386c71-57 148-82 244 1%22/%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Ccircle cx=%22176.3%22 cy=%22166.6%22 r=%2240.1%22/%3E %3Ccircle cx=%22326.7%22 cy=%22166.2%22 r=%2240.1%22/%3E %3Cpath fill=%22%2331a7ff%22 d=%22M367 203s-64 100-4 101 20-76 4-101z%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M131 386c71-57 148-82 244 1%22/%3E%3C/svg%3E"
     },{
         name: "bored", //      \u1F971  28  0x1C
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22 fill-rule=%22evenodd%22/%3E %3Cellipse cx=%22253.4%22 cy=%22308.5%22 fill-rule=%22evenodd%22 rx=%2247.8%22 ry=%2277%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M304 154c35-14 74 3 87 34m-181-34c-35-14-74 3-86 34%22/%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Cellipse cx=%22253.4%22 cy=%22308.5%22 rx=%2247.8%22 ry=%2277%22/%3E %3Cpath fill=%22none%22 stroke=%22%23000%22 stroke-linecap=%22round%22 stroke-width=%2220%22 d=%22M304 154c35-14 74 3 87 34m-181-34c-35-14-74 3-86 34%22/%3E%3C/svg%3E"
     },{
         name: "surprised", //   \u1F62E  29  0x1D
-        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Cg fill-rule=%22evenodd%22%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Cellipse cx=%22176.3%22 cy=%22176.9%22 rx=%2240.1%22 ry=%2275.2%22/%3E %3Cellipse cx=%22326.7%22 cy=%22176.2%22 rx=%2240.1%22 ry=%2275.2%22/%3E %3Cellipse cx=%22255.3%22 cy=%22365.7%22 rx=%2227.2%22 ry=%2228.4%22/%3E %3C/g%3E%3C/svg%3E"
+        uri: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 507 507%22%3E %3Cg%3E %3Ccircle cx=%22253.4%22 cy=%22253.4%22 r=%22253.4%22 fill=%22%23ffc10e%22/%3E %3Cellipse cx=%22176.3%22 cy=%22176.9%22 rx=%2240.1%22 ry=%2275.2%22/%3E %3Cellipse cx=%22326.7%22 cy=%22176.2%22 rx=%2240.1%22 ry=%2275.2%22/%3E %3Cellipse cx=%22255.3%22 cy=%22365.7%22 rx=%2227.2%22 ry=%2228.4%22/%3E %3C/g%3E%3C/svg%3E"
     }
 ].forEach(emoji => {
     emojisDropdown.push([{
@@ -1857,6 +1857,7 @@ Blockly.Blocks['variables_get'].onchange = function (event) {
 /** @type {string} */
 Blockly.Msg.TEXT_PRINT = 'print %1';
 Blockly.Msg.TEXT_PRINT_NO_NEWLINE_TITLE = 'print %1 without new line';
+//Blockly.Msg.TEXT_LENGTH_TITLE = 'length of %1';
 
 Blockly.Blocks['text_print'] = {
     init: function() {
@@ -1932,6 +1933,8 @@ Blockly.Blocks['text_repeat'] = {
         });
     }
 };
+
+//Blockly.Msg.MATH_RANDOM_INT_TITLE = "random integer from %1 to %2";
 
 Blockly.Blocks['my_random'] = {
     init: function() {
@@ -2071,6 +2074,7 @@ Blockly.Blocks['logic_compare'] = {
 };
 
 
+//Blockly.Msg.LOGIC_NEGATE_TITLE = "not %1";
 Blockly.Msg.LOGIC_OPERATION_TOOLTIP_AND = "Return true if both inputs are true.";
 Blockly.Msg.LOGIC_OPERATION_TOOLTIP_OR = "Return true if at least one of the inputs is true.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "While a value is true, then do some statements.";
@@ -2079,6 +2083,7 @@ Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK = "Break out of the containin
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE = "Skip the rest of this loop, and continue with the next iteration.";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Have the variable '%1' take on the values from the start number to the end number, counting by the specified interval, and do the specified blocks.";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "For each item in a list, set the variable '%1' to the item, and then do some statements.";
+//Blockly.Msg.MATH_CONSTRAIN_TITLE = "constrain %1 low %2 high %3";
 Blockly.Msg.MATH_SINGLE_TOOLTIP_ROOT = "Return the square root of a number.";
 Blockly.Msg.MATH_SINGLE_TOOLTIP_ABS = "Return the absolute value of a number.";
 Blockly.Msg.MATH_SINGLE_TOOLTIP_NEG = "Return the negation of a number.";
