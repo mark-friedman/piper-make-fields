@@ -284,6 +284,4 @@ Blockly.FieldPitch = class extends Blockly.FieldTextInput {
     };
 }
 
-
-
 Blockly.fieldRegistry.register('field_pitch', Blockly.FieldPitch);

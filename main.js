@@ -9,85 +9,91 @@
 // ...
 
 // Add all of the styles and overrides in here first.
-const piperMakeTheme = Blockly.Theme.defineTheme('piper-make-theme', {
-    "base": Blockly.Themes.Classic,
-      "blockStyles": {
-        "chip_blocks": {
-            "hat": "cap",
-            "colourPrimary": "#006400",
-          "colourSecondary": "#59AD59",
-          "colourTertiary": "#003300"
+const piperMakeTheme = Blockly.Theme.defineTheme("piper-make-theme", {
+    base: Blockly.Themes.Classic,
+    blockStyles: {
+        chip_blocks: {
+            hat: "cap",
+            colourPrimary: "#006400",
+            colourSecondary: "#59AD59",
+            colourTertiary: "#003300",
         },
-        "logic_blocks": {
-          "colourPrimary": "#BC75F8",
-          "colourSecondary": "#DFA6FF",
-          "colourTertiary": "#8C4FAB"
+        logic_blocks: {
+            colourPrimary: "#BC75F8",
+            colourSecondary: "#DFA6FF",
+            colourTertiary: "#8C4FAB",
         },
-        "math_blocks": {
-          "colourPrimary": "#BC75F8",
-          "colourSecondary": "#DFA6FF",
-          "colourTertiary": "#8C4FAB"
+        math_blocks: {
+            colourPrimary: "#BC75F8",
+            colourSecondary: "#DFA6FF",
+            colourTertiary: "#8C4FAB",
         },
-        "loop_blocks": {
-          "colourPrimary": "#CD00FF",
-          "colourSecondary": "#F36EFF",
-          "colourTertiary": "#9200B6"
+        loop_blocks: {
+            colourPrimary: "#CD00FF",
+            colourSecondary: "#F36EFF",
+            colourTertiary: "#9200B6",
         },
-        "variable_blocks": {
-          "colourPrimary": "#88B500",
-          "colourSecondary": "#A8D800",
-          "colourTertiary": "#668000"
+        variable_blocks: {
+            colourPrimary: "#88B500",
+            colourSecondary: "#A8D800",
+            colourTertiary: "#668000",
         },
-        "variable_dynamic_blocks": {
-          "colourPrimary": "#88B500",
-          "colourSecondary": "#A8D800",
-          "colourTertiary": "#668000"
+        variable_dynamic_blocks: {
+            colourPrimary: "#88B500",
+            colourSecondary: "#A8D800",
+            colourTertiary: "#668000",
         },
-        "value_blocks": {
-          "colourPrimary": "#BDA600",
-          "colourSecondary": "#FFD836",
-          "colourTertiary": "#9C7D00"
+        value_blocks: {
+            colourPrimary: "#BDA600",
+            colourSecondary: "#FFD836",
+            colourTertiary: "#9C7D00",
         },
-        "text_blocks": {
-          "colourPrimary": "#BDA600",
-          "colourSecondary": "#FFD836",
-          "colourTertiary": "#9C7D00"
+        text_blocks: {
+            colourPrimary: "#BDA600",
+            colourSecondary: "#FFD836",
+            colourTertiary: "#9C7D00",
         },
-        "list_blocks": {
-          "colourPrimary": "#FF6C37",
-          "colourSecondary": "#FFA366",
-          "colourTertiary": "#C63500"
+        list_blocks: {
+            colourPrimary: "#FF6C37",
+            colourSecondary: "#FFA366",
+            colourTertiary: "#C63500",
         },
-        "sound_blocks": {
-          "colourPrimary": "#90A9FF",
-          "colourSecondary": "#D6E2FF",
-          "colourTertiary": "#6881D6"
+        sound_blocks: {
+            colourPrimary: "#90A9FF",
+            colourSecondary: "#D6E2FF",
+            colourTertiary: "#6881D6",
         },
-        "procedure_blocks": {
-          "colourPrimary": "#CE3905",
-          "colourSecondary": "#FF724D",
-          "colourTertiary": "#801F00"
+        procedure_blocks: {
+            colourPrimary: "#CE3905",
+            colourSecondary: "#FF724D",
+            colourTertiary: "#801F00",
         },
-        "input_blocks": {
-          "colourPrimary": "#2CB1F8",
-          "colourSecondary": "#A6DAFF",
-          "colourTertiary": "#007BBA"
+        input_blocks: {
+            colourPrimary: "#2CB1F8",
+            colourSecondary: "#A6DAFF",
+            colourTertiary: "#007BBA",
         },
-        "output_blocks": {
-          "colourPrimary": "#005CB9",
-          "colourSecondary": "#66A3FF",
-          "colourTertiary": "#003F80"
-        }
-    }
-  });
-  
+        output_blocks: {
+            colourPrimary: "#005CB9",
+            colourSecondary: "#66A3FF",
+            colourTertiary: "#003F80",
+        },
+    },
+});
 
-
-getJsonData('./pageData.json', setupBlockly);
-
+getJsonData("./pageData.json", setupBlockly);
 
 function setupBlockly(data) {
     window.pageData = data;
+
+	/**
+	 * 
+	 * @param {String} xmlStr string representation of the XML of a blockly workspace
+	 * @returns XML DOM representation of a blockly workspace
+	 */
+	Blockly.Xml.textToDom = function (xmlStr) {
+		return (new window.DOMParser()).parseFromString(xmlStr, "text/xml");
+	}
 
     const blocklyDiv = document.getElementById("blocklyDiv");
     window.workspace = Blockly.inject(blocklyDiv, {
@@ -96,8 +102,8 @@ function setupBlockly(data) {
         grid: {
             spacing: 30,
             length: 5,
-            colour: '#ddd',
-            snap: false
+            colour: "#ddd",
+            snap: false,
         },
         trashcan: true,
         zoom: {
@@ -106,31 +112,32 @@ function setupBlockly(data) {
             startScale: 0.7,
             maxScale: 3,
             minScale: 0.3,
-            scaleSpeed: 1.1  // this is a multiplier, so it should be larger than 1
+            scaleSpeed: 1.1, // this is a multiplier, so it should be larger than 1
         },
         //media: 'assets/media/',
         move: {
             scrollbars: true,
             drag: true,
-            wheel: false
+            wheel: false,
         },
-        renderer: 'zelos',
-        scrollbars: false
+        renderer: "zelos",
+        scrollbars: false,
     });
 
     window.addEventListener("resize", resizeBlocklyContainer, false);
     resizeBlocklyContainer();
 
+	// Disable any blocks that are not attached to the "Start" block.
+	workspace.addChangeListener(Blockly.Events.disableOrphans);
+
     // Update generated code and local storage when block changes are made
     workspace.addChangeListener((event) => {
-      // Don't make changes unless it's necessary
-      if (event.type !== Blockly.Events.UI) {
-          $('#code-display').innerHTML = Blockly.Python.workspaceToCode(workspace);
-      }
-  });
+        // Don't make changes unless it's necessary
+        if (event.type !== Blockly.Events.UI) {
+            $("#code-display").innerHTML = Blockly.Python.workspaceToCode(workspace);
+        }
+    });
 }
-
-
 
 function resizeBlocklyContainer() {
     const blocklyArea = document.getElementById("blocklyArea");
@@ -150,9 +157,7 @@ function resizeBlocklyContainer() {
     blocklyDiv.style.width = blocklyArea.offsetWidth + "px";
     blocklyDiv.style.height = blocklyArea.offsetHeight + "px";
     Blockly.svgResize(workspace);
-};
-
-
+}
 
 /**
  * @description Generates the XML needed to populate the toolbox from the pageData.toolboxObject object.
@@ -162,29 +167,31 @@ function mapToolbox() {
 
     for (let i = 0; i < pageData.toolboxObject.categories.length; i++) {
         let category = pageData.toolboxObject.categories[i];
-        toolBoxTree += `<category name="${category.name}" ${(category.custom ? 'custom="' + category.custom + '"' : '')}>`;
+        toolBoxTree += `<category name="${category.name}" ${
+            category.custom ? 'custom="' + category.custom + '"' : ""
+        }>`;
         if (category.blocks && !category.custom) {
             for (let j = 0; j < category.blocks.length; j++) {
                 if (category.blocks[j].visible) {
-                    toolBoxTree += `<block type="${category.blocks[j].type}">${category.blocks[j].inner || ''}</block>`;
+                    toolBoxTree += `<block type="${category.blocks[j].type}">${category.blocks[j].inner || ""}</block>`;
                 }
             }
         }
-        toolBoxTree += '</category>';
+        toolBoxTree += "</category>";
     }
-    return toolBoxTree + '</xml>';
+    return toolBoxTree + "</xml>";
 }
 
-/** 
+/**
  * @returns {String} XML (minus the <xml></xml> tags) string of the blocks currently on the workspace
  */
 function getXml() {
-    code = '';
+    code = "";
     if (Blockly && Blockly.Xml && workspace) {
         var xmlDoc = Blockly.Xml.workspaceToDom(workspace);
         var code = Blockly.Xml.domToText(xmlDoc)
-            .replace(/<\/?xml.*?>/g, '')
-            .replace(/ id=".*?"/g, '');
+            .replace(/<\/?xml.*?>/g, "")
+            .replace(/ id=".*?"/g, "");
     }
     return code;
 }
@@ -194,8 +201,8 @@ function getXml() {
  * @param {string} xmlString string representation of the XML of a blockly program.
  */
 function setXml(xmlString) {
-    if (xmlString.indexOf('<xml') === -1) {
-        xmlString = '<xml>' + xmlString + '</xml>';
+    if (xmlString.indexOf("<xml") === -1) {
+        xmlString = "<xml>" + xmlString + "</xml>";
     }
     Blockly.Xml.clearWorkspaceAndLoadFromXml(Blockly.Xml.textToDom(xmlString), workspace);
 }
@@ -208,15 +215,14 @@ function setXml(xmlString) {
 function filterToolbox(action, blockList) {
     if (window.Blockly && window.pageData.toolboxObject) {
         for (let i = 0; i < pageData.toolboxObject.categories.length; i++) {
-
             let category = pageData.toolboxObject.categories[i];
             if (category.blocks) {
                 for (let j = 0; j < category.blocks.length; j++) {
-                    if (action === 'clear' || action === 'reset') {
-                        category.blocks[j].visible = (action === 'clear' ? false : true);
+                    if (action === "clear" || action === "reset") {
+                        category.blocks[j].visible = action === "clear" ? false : true;
                     } else {
                         if (blockList.indexOf(category.blocks[j].type) > -1) {
-                            category.blocks[j].visible = (action === 'remove' ? false : true);
+                            category.blocks[j].visible = action === "remove" ? false : true;
                         }
                     }
                 }
@@ -237,7 +243,7 @@ function filterToolbox(action, blockList) {
             if (k === 0) {
                 selector = 'div[aria-level="1"]:first-child';
             }
-            $(selector).style.display = (showCategory ? 'block' : 'none');
+            $(selector).style.display = showCategory ? "block" : "none";
         }
     }
 }
